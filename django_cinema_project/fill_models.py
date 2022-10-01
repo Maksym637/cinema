@@ -1,11 +1,10 @@
 import django
 import os
 
-from app_user.models import User
-
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_cinema_project.settings')
 django.setup()
+
+from app_user.models import User
 
 
 def main():
@@ -17,7 +16,8 @@ def main():
     user2.save()
     user3.save()
 
-    print(User.objects.all())
+    for i in range(len(User.objects.all())):
+        print(User.objects.all()[i])
 
 
 if __name__ == '__main__':
