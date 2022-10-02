@@ -26,4 +26,4 @@ class User(models.Model):
                f"email      : {self.email}\n" \
                f"password   : {self.password}\n" \
                f"phone      : {self.phone}\n" \
-               f"is_admin   : {self.is_admin}\n"    
+               f"is_admin   : {self.is_admin}"    
