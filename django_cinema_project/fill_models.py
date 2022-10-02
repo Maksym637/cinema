@@ -8,16 +8,16 @@ from app_user.models import User
 
 
 def main():
-    user1 = User(1, 'u1', 'user1', 'user1', 'user1@gmail.com', '1111', '1111', False)
-    user2 = User(2, 'u2', 'user2', 'user2', 'user2@gmail.com', '2222', '2222', False)
-    user3 = User(3, 'u3', 'user3', 'user3', 'user3@gmail.com', '3333', '3333', False)
+    user1 = User.objects.create('u1', 'user1', 'user1', 'user1@gmail.com', '1111', '1111', False)
+    # user2 = User(2, 'u2', 'user2', 'user2', 'user2@gmail.com', '2222', '2222', False)
+    # user3 = User(3, 'u3', 'user3', 'user3', 'user3@gmail.com', '3333', '3333', False)
 
     user1.save()
-    user2.save()
-    user3.save()
+    # user2.save()
+    # user3.save()
 
-    for i in range(len(User.objects.all())):
-        print(User.objects.all()[i])
+    # for i in range(len(User.objects.all())):
+    #     print(User.objects.all()[i])
 
 
 if __name__ == '__main__':
