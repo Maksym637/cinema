@@ -5,7 +5,7 @@ class Film(models.Model):
     name = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
     language = models.CharField(max_length=50)
-    year = models.DateTimeField(auto_now_add=True)
+    year = models.DateTimeField()
     rate = models.IntegerField()
 
     class Meta:
