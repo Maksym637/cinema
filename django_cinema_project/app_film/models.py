@@ -21,6 +21,6 @@ class Film(models.Model):
                f"name       : {self.name}\n" \
                f"genre      : {self.genre}\n" \
                f"language   : {self.language}\n" \
-               f"image      : [{self.image.url}, {self.image.size}]\n" \
+               f"image url  : {self.image.url}\n" \
                f"year       : {self.year}\n" \
                f"rate       : {self.rate}"
