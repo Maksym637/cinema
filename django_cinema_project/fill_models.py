@@ -14,7 +14,7 @@ from app_booking.models import Booking
 
 def main():
     user_1 = User.create('u1', 'user1', 'user1', 'user1@gmail.com', '1111', '1111', False)
-    film_1 = Film.create('film1', 'film1', 'language1', '2022-10-3', 5)
+    film_1 = Film.create('film1', 'film1', 'language1', 'images/image_film.png','2022-10-3', 5)
     hall_1 = Hall.create(5, 250)
 
     user_1.save()
