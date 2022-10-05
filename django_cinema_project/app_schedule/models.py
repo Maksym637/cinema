@@ -6,7 +6,7 @@ from app_hall.models import Hall
 class Schedule(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE)
     hall = models.ForeignKey(Hall, on_delete=models.CASCADE)
-    time_start= models.TimeField()
+    time_start = models.TimeField()
     time_end = models.TimeField()
     date = models.DateField()
 
