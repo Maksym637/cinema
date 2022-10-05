@@ -3,10 +3,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-r&s2@_lh9!dh$omf0=onzk^x=^0g#pbsewdmfu52^lq4_&cxc('
 
@@ -16,9 +12,14 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
+# Application definition :
 INSTALLED_APPS = [
+    'app_user',
+    'app_seat',
+    'app_schedule',
+    'app_hall',
+    'app_film',
+    'app_booking',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,20 +59,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'django_cinema_project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# Connecting to database :
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'cinema', 
+        'USER': 'postgres', 
+        'PASSWORD': 'M2381843',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
-
+# For password validation :
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -88,9 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
-
+# Internationalization :
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -100,12 +99,8 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+# Used for static files (CSS, JavaScript, Images) :
 STATIC_URL = 'static/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
+# Default primary key field type :
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

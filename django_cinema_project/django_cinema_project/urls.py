@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from django_cinema_project.views import index
+from app_user.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
