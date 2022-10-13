@@ -11,8 +11,8 @@ urlpatterns = [
     path('', index, name='homepage'),
 
     # halls :
-    path('hall/', HallView.as_view()),
-    path('hall/<int:id>/', HallView.as_view())
+    path('hall/', HallView.as_view(), name='hall-list'),
+    path('hall/<int:id>/', HallView.as_view(), name='hall-id')
 
     # films :
 
