@@ -11,9 +11,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('app_seat.urls')),
-    path('', include('app_user.urls'))
-
-    path('', index, name='homepage'),
+    path('', include('app_user.urls')),
 
     # halls :
     path('hall/', HallView.as_view()),
@@ -27,5 +25,6 @@ urlpatterns = [
     path('schedule/', ScheduleView.as_view()),
     path('schedule/<int:id>/', ScheduleView.as_view()),
 ]
+
 
 urlpatterns = format_suffix_patterns(urlpatterns)
