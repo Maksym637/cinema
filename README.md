@@ -10,3 +10,10 @@ Create _app_ :
 For migrations : 
 - python manage.py makemigrations
 - python manage.py migrate
+
+For tests :
+- python manage.py test
+
+For coverage :
+- coverage run manage.py test
+- coverage report
