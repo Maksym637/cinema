@@ -4,14 +4,16 @@ from app_hall.models import Hall
 
 
 class Schedule(models.Model):
+    class Meta:
+        db_table = "schedules"
+        ordering = ['date']
+    
     film = models.ForeignKey(Film, on_delete=models.CASCADE)
     hall = models.ForeignKey(Hall, on_delete=models.CASCADE)
     time_start = models.TimeField()
     time_end = models.TimeField()
     date = models.DateField()
 
-    class Meta:
-        ordering = ['date']
 
     @classmethod
     def create(cls, film, hall, time_start, time_end, date):
