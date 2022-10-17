@@ -16,10 +16,12 @@ def main():
     user_1 = User.create('u1', 'user1', 'user1', 'user1@gmail.com', '1111', '1111', False)
     film_1 = Film.create('film1', 'film1', 'language1', 'images/image_film.png', '2022-10-3', 5)
     hall_1 = Hall.create(5, 250)
+    hall_2 = Hall.create(10, 500)
 
     user_1.save()
     film_1.save()
     hall_1.save()
+    hall_2.save()
 
     seat_1 = Seat.create(hall_1, seating=Seat.CLS, is_free=True)
     seat_2 = Seat.create(hall_1, seating=Seat.CLS, is_free=True)

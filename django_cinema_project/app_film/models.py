@@ -10,7 +10,7 @@ class Film(models.Model):
     genre = models.CharField(max_length=50)
     language = models.CharField(max_length=50)
     image = models.ImageField(null=True)
-    year = models.DateTimeField()
+    year = models.DateField()
     rate = models.IntegerField()
 
     @classmethod
