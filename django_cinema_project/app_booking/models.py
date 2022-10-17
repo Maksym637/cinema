@@ -5,6 +5,9 @@ from app_seat.models import Seat
 
 
 class Booking(models.Model):
+    class Meta:
+        db_table = "bookings"
+
     price = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     seat = models.ForeignKey(Seat, on_delete=models.CASCADE)
