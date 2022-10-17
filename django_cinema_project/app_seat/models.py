@@ -5,7 +5,7 @@ from app_hall.models import Hall
 class Seat(models.Model):
     class Meta:
         db_table = "seats"
-    
+
     VIP = 'vip seating'
     CLS = 'classical seating'
     KID = 'kid seating'

@@ -4,7 +4,7 @@ from django.db import models
 class Hall(models.Model):
     class Meta:
         db_table = "halls"
-    
+
     number = models.IntegerField()
     max_people_count = models.IntegerField()
 

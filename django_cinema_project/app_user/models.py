@@ -4,14 +4,14 @@ from django.db import models
 class User(models.Model):
     class Meta:
         db_table = "users"
-    
+
     username = models.CharField(max_length=100, unique=True)
     first_name = models.CharField(max_length=120)
     last_name = models.CharField(max_length=120)
     email = models.CharField(max_length=150)
     password = models.CharField(max_length=150)
-    phone = models.CharField(max_length=120)
     is_admin = models.BooleanField(default=False)
+    phone = models.CharField(max_length=120)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

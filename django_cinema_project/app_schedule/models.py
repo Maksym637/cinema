@@ -7,7 +7,7 @@ class Schedule(models.Model):
     class Meta:
         db_table = "schedules"
         ordering = ['date']
-    
+
     film = models.ForeignKey(Film, on_delete=models.CASCADE)
     hall = models.ForeignKey(Hall, on_delete=models.CASCADE)
     time_start = models.TimeField()
