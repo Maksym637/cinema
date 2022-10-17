@@ -2,6 +2,9 @@ from django.db import models
 
 
 class User(models.Model):
+    class Meta:
+        db_table = "users"
+    
     username = models.CharField(max_length=100, unique=True)
     first_name = models.CharField(max_length=120)
     last_name = models.CharField(max_length=120)

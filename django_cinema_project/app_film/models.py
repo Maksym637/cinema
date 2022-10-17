@@ -2,15 +2,16 @@ from django.db import models
 
 
 class Film(models.Model):
+    class Meta:
+        db_table = "films"
+        ordering = ['year']
+
     name = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
     language = models.CharField(max_length=50)
     image = models.ImageField(null=True)
     year = models.DateField()
     rate = models.IntegerField()
-
-    class Meta:
-        ordering = ['year']
 
     @classmethod
     def create(cls, name, genre, language, image, year, rate):
