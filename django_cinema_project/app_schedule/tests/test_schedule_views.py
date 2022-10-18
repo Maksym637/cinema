@@ -15,8 +15,8 @@ class ScheduleViewTest(APITestCase):
         self.hall1.save()
         self.hall2.save()
 
-        self.film1 = Film.create('film1', 1, 1, None, '2022-10-3', 3)
-        self.film2 = Film.create('film2', 2, 2, None, '2022-10-3', 3)
+        self.film1 = Film.create('film1', 'Comedy', 'English', None, '2022-10-3', 3)
+        self.film2 = Film.create('film2', 'Crime', 'Spanish', None, '2022-10-3', 3)
         self.film1.save()
         self.film2.save()
 

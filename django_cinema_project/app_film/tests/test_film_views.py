@@ -4,7 +4,7 @@ from rest_framework import status
 
 class FilmViewTest(APITestCase):
     URL = '/film/'
-    FILM_DATA_CORRECT = {"name": "name1", "genre": 1, "language": 1, "image": None, "year": "2020-10-10", "rate": 3}
+    FILM_DATA_CORRECT = {"name": "name1", "genre": 'Comedy', "language": 'English', "image": None, "year": "2020-10-10", "rate": 3}
     FILM_DATA_INCORRECT = {"name": "name2", "genre": "genre2", "language": "language2", "image": None, "year": 10, "rate": 10}
 
     def test_get_films(self):
