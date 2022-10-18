@@ -4,16 +4,16 @@ Run the project : python manage.py runserver
 
 See all libraries : pip freeze
 
-Create _app_ :
+Create **app** :
 - python manage.py startapp _name_
 
-For migrations : 
+For **migrations** : 
 - python manage.py makemigrations
 - python manage.py migrate
 
-For tests :
+For **tests** :
 - python manage.py test
 
-For coverage :
+For **coverage** :
 - coverage run manage.py test
 - coverage report
