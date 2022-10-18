@@ -3,15 +3,22 @@ from django.urls import path, include
 
 from rest_framework.urlpatterns import format_suffix_patterns
 from app_hall.views import HallView
+from app_seat.views import SeatView
 from app_film.views import FilmView
 from app_schedule.views import ScheduleView
+from app_user.views import UserView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include('app_seat.urls')),
-    path('', include('app_user.urls')),
+    # users :
+    path('user/', UserView.as_view()),
+    path('user/<str:username>', UserView.as_view()),
+
+    #seats :
+    path('seat/', SeatView.as_view()),
+    path('seat/<int:id>/', SeatView.as_view()),
 
     # halls :
     path('hall/', HallView.as_view()),
