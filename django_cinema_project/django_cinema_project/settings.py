@@ -26,8 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'rest_framework',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
@@ -65,7 +64,7 @@ WSGI_APPLICATION = 'django_cinema_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Cinema',
+        'NAME': 'cinema',
         'USER': 'postgres', 
         'PASSWORD': 'M2381843',
         'HOST': '127.0.0.1',
