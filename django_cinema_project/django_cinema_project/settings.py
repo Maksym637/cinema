@@ -14,7 +14,6 @@ ALLOWED_HOSTS = []
 
 # Application definition :
 INSTALLED_APPS = [
-    'rest_framework',
     'app_user',
     'app_seat',
     'app_schedule',
@@ -26,7 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'django_cinema_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cinema',
+        'NAME': 'Cinema',
         'USER': 'postgres', 
         'PASSWORD': 'M2381843',
         'HOST': '127.0.0.1',
